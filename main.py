@@ -41,6 +41,11 @@ def main():
                 print("Game Over!")
                 quit()
 
+            for shot in shots:
+                if asteriod.check_collisions(shot):
+                    shot.kill()
+                    asteriod.split()
+
         screen.fill("black")
 
 
